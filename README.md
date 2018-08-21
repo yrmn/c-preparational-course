@@ -1,2 +1,2 @@
-# c-preparational-course
+# c-sharp-preparational-course
 c# preparational course labs
