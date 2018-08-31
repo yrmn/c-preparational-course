@@ -10,26 +10,26 @@ namespace MobilePhones.Components {
     
     public class Battery : BatteryBase {
 
-        private double size;
-        private int volume;
+        private double type = 3.4;
+        private int capacity = 18;
 
-        public double Size
+        public double Type
         {
-            get { return size; }
-            set { size = value; }
+            get { return type; }
+            set { type = value; }
         }
 
-        public int Volume
+        public int Capacity
         {
-            get { return volume; }
-            set { volume = value; }
+            get { return capacity; }
+            set { capacity = value; }
         }
 
         public Battery() {}
 
-        public Battery(double size, int volume) {
-            this.size = size;
-            this.volume = volume;
+        public Battery(double type, int capacity) {
+            this.type = type;
+            this.capacity = capacity;
         }
 
         public override string ToString() {

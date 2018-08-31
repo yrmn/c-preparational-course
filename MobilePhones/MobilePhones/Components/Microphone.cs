@@ -10,7 +10,7 @@ namespace MobilePhones.Components {
     
     public class Microphone : MicrophoneBase {
 
-        private int volume;
+        private int volume = 55;
 
         public int Volume
         {

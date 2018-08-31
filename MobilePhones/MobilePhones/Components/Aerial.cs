@@ -10,7 +10,7 @@ namespace MobilePhones.Components {
     
     public class Aerial : AerialBase {
 
-        private double frequency;
+        private double frequency = 116.1;
 
         public double Frequency
         {

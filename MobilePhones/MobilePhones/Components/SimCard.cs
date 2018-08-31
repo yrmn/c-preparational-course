@@ -4,35 +4,49 @@ namespace MobilePhones.Components {
     
     public abstract class SimCardBase {
 
-        public abstract void Eject();
-        
+        public abstract string Pin { get; }
+        public abstract string Puk { get; }
+        public abstract string UserNumber { get; }
+
     }
 
     public class SimCard : SimCardBase {
 
-        private double size;
+        private double vSize = 3.5;
+        private string vPin = "1111";
+        private string vPuk = "1097";
+        private string vUserNumber = "1234567";
 
         public double Size
         {
-            get { return size; }
-            set { size = value; }
+            get { return vSize; }
         }
 
+        public override string Pin
+        {
+            get { return vPin; }
+        }
+
+        public override string Puk
+        {
+            get { return vPuk; }
+        }
+
+        public override string UserNumber
+        {
+            get { return vUserNumber; }
+        }
+        
         public SimCard() {}
 
-        public SimCard(double size) {
-            this.size = size;
+        public SimCard(double vSize) {
+            this.vSize = vSize;
         }
 
         public override string ToString() {
             return "Simple simcard";
         }
-
-        public override void Eject()
-        {
-            Console.WriteLine("SimCard has been ejected");
-        }
-  
+        
     }
 
     public class NewSimCard : SimCard {

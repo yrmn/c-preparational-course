@@ -6,21 +6,21 @@ namespace MobilePhones.Components {
     public abstract class ScreenBase {
 
         public abstract void Show(IScreenImage screenImage);
-
-        public abstract void Show(IScreenImage screenImage, int brightness);
-
+        
     }
 
     public class Screen : ScreenBase {
 
-        private double size;
-        private int pixels;
+        private double size = 7.1;
+        private int dpi = 326;
+        private int brightness = 70;
 
         public Screen() {}
 
-        public Screen(double size, int pixels) {
+        public Screen(double size, int dpi, int brightness) {
             this.size = size;
-            this.pixels = pixels;
+            this.dpi = dpi;
+            this.brightness = brightness;
         }
 
         public double Size {
@@ -28,9 +28,15 @@ namespace MobilePhones.Components {
             set { size = value; }
         }
 
-        public int Pixels {
-            get { return pixels; }
-            set { pixels = value; }
+        public int Dpi {
+            get { return dpi; }
+            set { dpi = value; }
+        }
+
+        public int Brightness
+        {
+            get { return brightness; }
+            set { brightness = value; }
         }
 
         public override string ToString() {
@@ -41,10 +47,6 @@ namespace MobilePhones.Components {
             Console.WriteLine("Simple screen image");
         }
         
-        public override void Show(IScreenImage screenImage, int brightness) {
-            Console.WriteLine("Simple screen image with " + brightness + " brightness");
-        }
-
     }
 
     public class TouchScreen : Screen {

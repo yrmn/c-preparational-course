@@ -10,7 +10,7 @@ namespace MobilePhones.Components {
     
     public class Dynamic : DynamicBase {
 
-        private int volume;
+        private int volume = 22;
 
         public int Volume
         {
@@ -34,22 +34,22 @@ namespace MobilePhones.Components {
         
     }
     
-    public class HiFiDynamic : Dynamic {
-
-        public HiFiDynamic() : base() {}
-
-        public override string ToString() {
-            return "HiFi dynamic";
-        }
-
-    }
-
-    public class StereoDynamic : HiFiDynamic {
+    public class StereoDynamic : Dynamic {
 
         public StereoDynamic() : base() {}
 
         public override string ToString() {
             return "Stereo dynamic";
+        }
+
+    }
+
+    public class HiFiDynamic : StereoDynamic {
+
+        public HiFiDynamic() : base() {}
+
+        public override string ToString() {
+            return "HiFi dynamic";
         }
 
     }

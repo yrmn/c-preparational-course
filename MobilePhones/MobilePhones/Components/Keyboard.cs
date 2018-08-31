@@ -4,40 +4,46 @@ namespace MobilePhones.Components {
     
     public abstract class KeyboardBase {
 
-        public abstract void Lock();
+        public abstract void Lock(bool isLocked);
+        public abstract void EnterText(string newText);
 
     }
     
     public class Keyboard : KeyboardBase {
 
-        private string figures;
-        private string letters;
+        private string layoutType = "EN/RUS/UA";
+        private int lettersNum = 102;
 
-        public string Figures
+        public string LayoutType
         {
-            get { return figures; }
-            set { figures = value; }
+            get { return layoutType; }
+            set { layoutType = value; }
         }
 
-        public string Letters
+        public int LettersNum
         {
-            get { return letters; }
-            set { letters = value; }
+            get { return lettersNum; }
+            set { lettersNum = value; }
         }
 
         public Keyboard() {}
 
-        public Keyboard(string figures, string letters) {
-            this.figures = figures;
-            this.letters = letters;
+        public Keyboard(string layoutType, int lettersNum) {
+            this.layoutType = layoutType;
+            this.lettersNum = lettersNum;
         }
 
         public override string ToString() {
             return "Simple keyboard";
         }
 
-        public override void Lock() {
-            Console.WriteLine("Keyboard is locked");
+        public override void Lock(bool isLocked) {
+            var lockText = isLocked ? "locked" : "unlocked";
+            Console.WriteLine("Keyboard is " + lockText);
+        }
+        
+        public override void EnterText(string newText) {
+            Console.WriteLine("Text is entered:" + newText);
         }
 
     }
