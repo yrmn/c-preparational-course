@@ -11,15 +11,7 @@ namespace ClassLibPhone.Utilities {
         public string User { get; set; }
         public string Text { get; set; }
         public DateTime ReceivingTime { get; set; }
-
-
-      /*  public Message() { }
-
-        public Message(string user, string text, DateTime receivingtime) {
-            User = user;
-        }
-        */
-
+        
     }
 
 }
