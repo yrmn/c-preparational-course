@@ -15,6 +15,7 @@ namespace WinFormsPhone {
         private int _msgNum;
         private bool _isFilterUser, _isFilterText, _isFilterDate, _isOR;
         private readonly SMSFormat _format = new SMSFormat();
+        private readonly MobilePhone _phone = new SimCorpMobile();
 
         public SMSScreen() {
             InitializeComponent();
@@ -95,9 +96,7 @@ namespace WinFormsPhone {
                 Invoke(new MessageStorage.SMSRecievedDelegate(OnSMSReceived), message);
                 return;
             }
-            MobilePhone phone;
-            phone = new SimCorpMobile();
-            phone.IncomingMessage(message);
+            _phone.IncomingMessage(message);
             // fill users for ComboBox
             string[] uniqueUsers = Filter.GetUniqueUsers(_sms.MsgList);
             foreach (string value in uniqueUsers) {
