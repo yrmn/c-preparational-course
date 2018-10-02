@@ -1,0 +1,12 @@
+c:\Workspaces\MobilePhones\WinFormsPhone\bin\Release\WinFormsPhone.exe.config
+c:\Workspaces\MobilePhones\WinFormsPhone\bin\Release\WinFormsPhone.exe
+c:\Workspaces\MobilePhones\WinFormsPhone\bin\Release\WinFormsPhone.pdb
+c:\Workspaces\MobilePhones\WinFormsPhone\bin\Release\ClassLibPhone.dll
+c:\Workspaces\MobilePhones\WinFormsPhone\bin\Release\ClassLibPhone.pdb
+c:\Workspaces\MobilePhones\WinFormsPhone\obj\Release\WinFormsPhone.csprojResolveAssemblyReference.cache
+c:\Workspaces\MobilePhones\WinFormsPhone\obj\Release\WinFormsPhone.Phone.resources
+c:\Workspaces\MobilePhones\WinFormsPhone\obj\Release\WinFormsPhone.Properties.Resources.resources
+c:\Workspaces\MobilePhones\WinFormsPhone\obj\Release\WinFormsPhone.SMSScreen.resources
+c:\Workspaces\MobilePhones\WinFormsPhone\obj\Release\WinFormsPhone.csproj.GenerateResource.Cache
+c:\Workspaces\MobilePhones\WinFormsPhone\obj\Release\WinFormsPhone.exe
+c:\Workspaces\MobilePhones\WinFormsPhone\obj\Release\WinFormsPhone.pdb
