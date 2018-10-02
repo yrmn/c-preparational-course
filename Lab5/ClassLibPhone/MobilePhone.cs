@@ -1,0 +1,90 @@
+﻿using System.Text;
+using ClassLibPhone.Components;
+using ClassLibPhone.Component_Interfaces;
+using ClassLibPhone.Content;
+using ClassLibPhone.SMS_Utilities;
+using ClassLibPhone.Utilities;
+
+namespace ClassLibPhone {
+
+    public abstract class MobilePhone {
+        
+        public IPlayback PlaybackComponent { get; set; }
+        public ICharger ChargerComponent { get; set; }
+        public IProtector ProtectorComponent { get; set; }
+
+        public abstract AerialBase AerialBase { get; }
+        public abstract BatteryBase BatteryBase { get; }
+        public abstract DynamicBase DynamicBase { get; }
+        public abstract KeyboardBase KeyboardBase { get; }
+        public abstract MicrophoneBase MicrophoneBase { get; }
+        public abstract ScreenBase ScreenBase { get; }
+        public abstract SimCardBase SimCardBase { get; }
+
+        internal SMSProvider SMSProvider { get; set; }
+
+        public MessageStorage MessageStorage { get; set; }
+
+        private void Show(IScreenImage screenImage) {
+            ScreenBase.Show(screenImage);
+        }
+        
+        public void Play(object data) {
+            PlaybackComponent.Play(data);
+        }
+
+        public void InnerCharge(object data) {
+            ChargerComponent.Charge(data);
+        }
+
+        public void Put(object data) {
+            ProtectorComponent.Put(data);
+        }
+
+        public void IncomingMessage(Message message) {
+            SMSProvider.AddMessage(message);
+        }
+
+        public void IncomingMessage(string message) {
+            SMSProvider.ReceiveMessage(message);
+        }
+        
+        public void Set_AreMessagesRun(bool b) {
+            SMSProvider.AreMessagesRun = b;
+        }
+
+        public void ResumeMessagesRun() {
+            SMSProvider.Start();
+        }
+
+        public void SuspendMessagesRun() {
+            SMSProvider.Stop();
+        }
+
+        public void Discharge() {
+            if (BatteryBase.Charge > 0) {
+                BatteryBase.Charge--;
+            }
+        }
+
+        public void Charge() {
+            if (BatteryBase.Charge <= 100) {
+                BatteryBase.Charge++;
+            }
+        }
+        
+        public string GetDescription() {
+            var descriptionBuilder = new StringBuilder();
+            descriptionBuilder.AppendLine($"Aerial Type: {AerialBase.ToString()}");
+            descriptionBuilder.AppendLine($"Battery Type: {BatteryBase.ToString()}");
+            descriptionBuilder.AppendLine($"Dynamic Type: {DynamicBase.ToString()}");
+            descriptionBuilder.AppendLine($"Keyboard Type: {KeyboardBase.ToString()}");
+            descriptionBuilder.AppendLine($"Microphone Type: {MicrophoneBase.ToString()}");
+            descriptionBuilder.AppendLine($"Screen Type: {ScreenBase.ToString()}");
+            descriptionBuilder.AppendLine($"SimCard Type: {SimCardBase.ToString()}");
+            return descriptionBuilder.ToString();
+        }
+        
+    }
+
+}
