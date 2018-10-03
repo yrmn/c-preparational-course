@@ -1,0 +1,8 @@
+c:\Workspaces\MobilePhones\MobilePhones\bin\Release\MobilePhones.exe.config
+c:\Workspaces\MobilePhones\MobilePhones\bin\Release\MobilePhones.exe
+c:\Workspaces\MobilePhones\MobilePhones\bin\Release\MobilePhones.pdb
+c:\Workspaces\MobilePhones\MobilePhones\bin\Release\ClassLibPhone.dll
+c:\Workspaces\MobilePhones\MobilePhones\bin\Release\ClassLibPhone.pdb
+c:\Workspaces\MobilePhones\MobilePhones\obj\Release\MobilePhones.csprojResolveAssemblyReference.cache
+c:\Workspaces\MobilePhones\MobilePhones\obj\Release\MobilePhones.exe
+c:\Workspaces\MobilePhones\MobilePhones\obj\Release\MobilePhones.pdb
