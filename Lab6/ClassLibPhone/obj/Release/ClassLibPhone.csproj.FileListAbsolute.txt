@@ -1,0 +1,5 @@
+c:\Workspaces\MobilePhones\ClassLibPhone\bin\Release\ClassLibPhone.dll
+c:\Workspaces\MobilePhones\ClassLibPhone\bin\Release\ClassLibPhone.pdb
+c:\Workspaces\MobilePhones\ClassLibPhone\obj\Release\ClassLibPhone.csprojResolveAssemblyReference.cache
+c:\Workspaces\MobilePhones\ClassLibPhone\obj\Release\ClassLibPhone.dll
+c:\Workspaces\MobilePhones\ClassLibPhone\obj\Release\ClassLibPhone.pdb
