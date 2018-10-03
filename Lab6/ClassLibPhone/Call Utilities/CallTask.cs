@@ -52,12 +52,12 @@ namespace ClassLibPhone.Call_Utilities {
         }
         
         private void DoCall(string name) {
-            var cc = new Contact {
+            var contact = new Contact {
                 Name = name,
                 PhonesList = new List<string>() {"2222", "222223"}
             };
             var call = new Call {
-                Contact = cc,
+                Contact = contact,
                 CallTime = DateTime.Now,
                 Direction = Call.CallDirection.Incoming
             };
